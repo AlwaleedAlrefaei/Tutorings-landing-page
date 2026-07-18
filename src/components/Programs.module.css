@@ -1,0 +1,81 @@
+.grid {
+  display: grid;
+  gap: var(--space-5);
+  padding: 0;
+}
+
+@media (min-width: 51.25rem) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:
+    border-color var(--dur) var(--ease),
+    transform var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease);
+}
+
+.card:hover,
+.card:focus-within {
+  border-color: var(--line-strong);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.card > img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-block-end: 1px solid var(--line);
+}
+
+.body {
+  padding: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.pill {
+  align-self: flex-start;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.05em;
+  padding: 0.3125rem var(--space-3);
+  border-radius: var(--radius-pill);
+  margin-block-end: var(--space-3);
+}
+
+.ielts .pill {
+  background: var(--tint-purple);
+  color: var(--btn-purple);
+}
+
+.general .pill {
+  background: var(--tint-green);
+  color: #23784a;
+}
+
+.title {
+  font-size: var(--step-2);
+}
+
+.text {
+  font-size: var(--step-0);
+  color: var(--ink-soft);
+  margin-block-start: var(--space-2);
+  flex: 1;
+}
+
+.cta {
+  margin-block-start: var(--space-5);
+  align-self: flex-start;
+}

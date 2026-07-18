@@ -1,0 +1,29 @@
+.list {
+  display: grid;
+  gap: var(--space-3);
+  margin-block-start: var(--space-5);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-3);
+  align-items: start;
+  font-size: var(--step-0);
+  color: var(--ink-soft);
+}
+
+.item::before {
+  content: '✓';
+  color: var(--reading-bg);
+  font-weight: 700;
+  line-height: 1.6;
+}
+
+.onDark .item {
+  color: #d2d8ec;
+}
+
+.onDark .item::before {
+  color: #7be3ac;
+}

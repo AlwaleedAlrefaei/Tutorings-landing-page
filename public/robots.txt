@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alwaleedalrefaei.github.io/Tutorings-landing-page/sitemap.xml

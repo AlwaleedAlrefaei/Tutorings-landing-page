@@ -1,0 +1,33 @@
+.band {
+  background: var(--surface);
+  border-block: 1px solid var(--line);
+}
+
+.cards {
+  display: grid;
+  gap: var(--space-4);
+  margin-block-start: var(--space-6);
+  padding: 0;
+}
+
+@media (min-width: 47.5rem) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  padding: var(--space-5);
+}
+
+.card h3 {
+  font-size: var(--step-0);
+  margin-block-end: var(--space-2);
+}
+
+.card p {
+  font-size: var(--step--1);
+  color: var(--ink-soft);
+}

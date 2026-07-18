@@ -1,0 +1,8 @@
+.band {
+  background: var(--surface);
+  border-block: 1px solid var(--line);
+}
+
+.cta {
+  margin-block-start: var(--space-6);
+}

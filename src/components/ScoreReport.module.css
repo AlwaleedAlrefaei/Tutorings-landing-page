@@ -1,0 +1,114 @@
+.report {
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  box-shadow: var(--shadow-lg), var(--shadow-sm);
+}
+
+.head {
+  background: var(--header-gradient);
+  color: #fff;
+  border-radius: var(--radius-sm);
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.head h2 {
+  font-size: var(--step--1);
+  font-weight: 600;
+}
+
+.head span {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  opacity: 0.85;
+}
+
+.bands {
+  display: grid;
+  gap: 0.4375rem;
+  margin-block-start: var(--space-3);
+}
+
+.band {
+  border-radius: 0.6875rem;
+  padding: 0.5625rem var(--space-3);
+  color: #fff;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.1875rem var(--space-3);
+  align-items: center;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.8125rem;
+}
+
+.score {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+.track {
+  grid-column: 1 / -1;
+  height: 0.3125rem;
+  border-radius: var(--radius-pill);
+  background: var(--progress-bg);
+  overflow: hidden;
+}
+
+.fill {
+  display: block;
+  height: 100%;
+  background: var(--progress-fill);
+  border-radius: var(--radius-pill);
+  width: 0;
+  transition: width 1.1s var(--ease);
+}
+
+.badge {
+  display: inline-block;
+  background: var(--speaking-badge);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.5625rem;
+  padding: 0.125rem 0.4375rem;
+  border-radius: var(--radius-pill);
+  margin-inline-start: var(--space-2);
+  vertical-align: middle;
+}
+
+.foot {
+  margin-block-start: var(--space-3);
+  font-size: 0.65rem;
+  color: var(--red-text);
+  font-family: var(--font-mono);
+}
+
+.speaking {
+  background: var(--speaking-bg);
+}
+.listening {
+  background: var(--listening-bg);
+}
+.writing {
+  background: var(--writing-bg);
+}
+.reading {
+  background: var(--reading-bg);
+}
+
+.overall {
+  background: var(--overall-bg);
+  margin-block-start: 0.1875rem;
+}
+
+.overall .score {
+  font-size: var(--step-1);
+}

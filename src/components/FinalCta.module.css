@@ -1,0 +1,28 @@
+.band {
+  background: var(--header-gradient);
+  color: #fff;
+  text-align: center;
+  padding-block: var(--space-9);
+}
+
+.title {
+  font-size: var(--step-4);
+  max-width: 20ch;
+  margin-inline: auto;
+}
+
+.body {
+  margin: var(--space-4) auto 0;
+  max-width: 56ch;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.cta {
+  margin-block-start: var(--space-6);
+}
+
+.note {
+  margin-block-start: var(--space-4);
+  font-size: var(--step--1);
+  color: rgba(255, 255, 255, 0.88);
+}

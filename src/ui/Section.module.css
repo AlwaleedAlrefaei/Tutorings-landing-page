@@ -1,0 +1,35 @@
+.section {
+  padding-block: var(--space-9);
+}
+
+.tight {
+  padding-block-start: 0;
+}
+
+.head {
+  max-width: 60ch;
+  margin-block-end: var(--space-7);
+}
+
+.center {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.kicker {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--step--1);
+  letter-spacing: 0.08em;
+  color: var(--btn-purple);
+  margin-block-end: var(--space-3);
+}
+
+.title {
+  font-size: var(--step-3);
+}
+
+.lede {
+  margin-block-start: var(--space-3);
+  color: var(--ink-soft);
+}
