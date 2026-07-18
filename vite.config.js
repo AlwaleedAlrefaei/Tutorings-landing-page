@@ -1,8 +1,12 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// Deployed to GitHub Pages at /<repo>/ — override with BASE_PATH for other hosts.
-const base = process.env.BASE_PATH ?? '/Tutorings-landing-page/';
+// Base path differs per host:
+//   - GitHub Pages serves from /<repo>/, so it needs '/Tutorings-landing-page/'.
+//   - Vercel (and most other hosts) serve from the domain root '/'.
+// Vercel sets the VERCEL env var during its build, so we detect it automatically.
+// Override explicitly with BASE_PATH for any other host.
+const base = process.env.BASE_PATH ?? (process.env.VERCEL ? '/' : '/Tutorings-landing-page/');
 
 export default defineConfig({
   base,
