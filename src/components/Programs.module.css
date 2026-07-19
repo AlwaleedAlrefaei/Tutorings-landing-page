@@ -11,6 +11,7 @@
 }
 
 .card {
+  position: relative;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -23,11 +24,37 @@
     box-shadow var(--dur) var(--ease);
 }
 
+/* Color-keyed accent bar at the top edge of each program card. */
+.card::before {
+  content: '';
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline: 0;
+  height: 4px;
+  z-index: 2;
+  transform: scaleX(0.35);
+  transform-origin: inline-start;
+  transition: transform var(--dur) var(--ease);
+}
+
+.ielts::before {
+  background: linear-gradient(90deg, var(--btn-purple), var(--speaking-bg));
+}
+
+.general::before {
+  background: linear-gradient(90deg, var(--reading-bg), #5fd39a);
+}
+
 .card:hover,
 .card:focus-within {
   border-color: var(--line-strong);
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
+}
+
+.card:hover::before,
+.card:focus-within::before {
+  transform: scaleX(1);
 }
 
 .card > img {

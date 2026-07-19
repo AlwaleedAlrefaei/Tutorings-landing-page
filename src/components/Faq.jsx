@@ -39,7 +39,7 @@ export function Faq() {
   const [openIndex, setOpenIndex] = useState(0);
 
   return (
-    <Section labelledBy="faq-title">
+    <Section id="faq" labelledBy="faq-title">
       <SectionHead id="faq-title" kicker="أسئلة متكررة" title="قبل أن تسجّل" center />
 
       <Reveal as="ul" className={styles.list}>

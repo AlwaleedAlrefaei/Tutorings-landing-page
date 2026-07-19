@@ -31,15 +31,15 @@
 }
 
 .primary {
-  background: var(--btn-purple);
+  background: linear-gradient(120deg, var(--btn-purple-2), var(--btn-purple));
   color: #fff;
-  box-shadow: 0 8px 22px -8px rgba(75, 46, 158, 0.7);
+  box-shadow: var(--shadow-brand);
 }
 
 .primary:hover {
-  background: #5736b8;
+  background: linear-gradient(120deg, #7a5fca, #5736b8);
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px -10px rgba(75, 46, 158, 0.75);
+  box-shadow: 0 22px 44px -16px rgba(75, 46, 158, 0.75);
 }
 
 .ghost {

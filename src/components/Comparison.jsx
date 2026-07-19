@@ -31,7 +31,7 @@ export function Comparison() {
   const { competitors, rows } = comparison;
 
   return (
-    <Section tight labelledBy="compare-title">
+    <Section id="compare" tight labelledBy="compare-title">
       <SectionHead id="compare-title" kicker="لماذا نحن" title="الصفات التي تميّزنا عن غيرنا" />
 
       <Reveal>

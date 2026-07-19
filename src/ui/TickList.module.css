@@ -15,9 +15,17 @@
 
 .item::before {
   content: '✓';
-  color: var(--reading-bg);
+  display: grid;
+  place-items: center;
+  inline-size: 1.5rem;
+  block-size: 1.5rem;
+  margin-block-start: 0.1875rem;
+  border-radius: 50%;
+  background: var(--tint-green);
+  color: #1c6a41;
+  font-size: 0.8125rem;
   font-weight: 700;
-  line-height: 1.6;
+  line-height: 1;
 }
 
 .onDark .item {
@@ -25,5 +33,6 @@
 }
 
 .onDark .item::before {
+  background: rgba(123, 227, 172, 0.18);
   color: #7be3ac;
 }

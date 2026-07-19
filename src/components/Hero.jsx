@@ -4,6 +4,12 @@ import { Button } from '../ui/Button';
 import { ScoreReport } from './ScoreReport';
 import styles from './Hero.module.css';
 
+const TRUST = [
+  { value: '+200', label: 'طالب بنتائج مثبتة' },
+  { value: '+7.5', label: 'آيلتس لكل مدرّس' },
+  { value: '24/7', label: 'جدولة مرنة' },
+];
+
 export function Hero() {
   return (
     <section className={styles.hero} aria-labelledby="hero-title">
@@ -26,8 +32,19 @@ export function Hero() {
             <Button href="#start" withArrow>
               {hero.cta}
             </Button>
-            <p className={styles.proof}>{hero.proof}</p>
+            <Button href="#programs" variant="ghost">
+              تصفّح البرامج
+            </Button>
           </div>
+
+          <ul className={styles.trust}>
+            {TRUST.map((t) => (
+              <li key={t.label}>
+                <b dir="ltr">{t.value}</b>
+                <span>{t.label}</span>
+              </li>
+            ))}
+          </ul>
         </div>
 
         <div className={styles.visual}>

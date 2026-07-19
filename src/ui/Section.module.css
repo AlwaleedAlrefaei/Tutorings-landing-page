@@ -17,12 +17,28 @@
 }
 
 .kicker {
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
   font-family: var(--font-mono);
   font-size: var(--step--1);
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: var(--btn-purple);
-  margin-block-end: var(--space-3);
+  margin-block-end: var(--space-4);
+}
+
+/* Ruler-tick mark: the "measurement" signature that leads every kicker. */
+.kicker::before {
+  content: '';
+  inline-size: 2.25rem;
+  block-size: 0.5rem;
+  flex: none;
+  background-image: repeating-linear-gradient(to right, currentColor 0 2px, transparent 2px 0.5rem);
+  opacity: 0.85;
+}
+
+.center .kicker {
+  justify-content: center;
 }
 
 .title {

@@ -1,5 +1,6 @@
 .scroll {
   overflow-x: auto;
+  max-width: 100%;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -38,27 +39,57 @@
 }
 
 .us {
-  background: var(--tint-purple) !important;
-  color: var(--btn-purple) !important;
+  background: var(--btn-purple) !important;
+  color: #fff !important;
+  font-size: var(--step-0) !important;
+  box-shadow: inset 0 -3px 0 0 rgba(255, 255, 255, 0.25);
 }
 
 .usCell {
-  background: #f7f5fe;
+  background: #f4f0fe;
   font-weight: 600;
+  box-shadow:
+    inset 1px 0 0 0 #e3daf9,
+    inset -1px 0 0 0 #e3daf9;
 }
 
 .table tbody tr:last-child td {
   border-block-end: 0;
 }
 
+.table tbody tr:last-child .usCell {
+  box-shadow:
+    inset 1px 0 0 0 #e3daf9,
+    inset -1px 0 0 0 #e3daf9,
+    inset 0 -3px 0 0 rgba(75, 46, 158, 0.18);
+}
+
 .yes {
-  color: #237a4d;
-  font-size: var(--step-1);
+  display: inline-grid;
+  place-items: center;
+  inline-size: 1.75rem;
+  block-size: 1.75rem;
+  border-radius: 50%;
+  background: var(--tint-green);
+  color: #1c6a41;
+  font-size: var(--step-0);
+  font-weight: 700;
+}
+
+.usCell .yes {
+  background: var(--btn-purple);
+  color: #fff;
 }
 
 .no {
+  display: inline-grid;
+  place-items: center;
+  inline-size: 1.75rem;
+  block-size: 1.75rem;
+  border-radius: 50%;
+  background: #f0f1f6;
   color: #9aa2ba;
-  font-size: var(--step-1);
+  font-size: var(--step--1);
 }
 
 .ltd {

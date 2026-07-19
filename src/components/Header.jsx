@@ -4,6 +4,13 @@ import { useScrolled } from '../hooks/useScrolled';
 import { Button } from '../ui/Button';
 import styles from './Header.module.css';
 
+const NAV = [
+  { href: '#programs', label: 'البرامج' },
+  { href: '#how', label: 'كيف نعمل' },
+  { href: '#compare', label: 'المقارنة' },
+  { href: '#faq', label: 'الأسئلة' },
+];
+
 export function Header() {
   const scrolled = useScrolled();
 
@@ -14,7 +21,17 @@ export function Header() {
           <img src={logo} alt="" width="38" height="38" />
           <b>{site.name}</b>
         </a>
-        <p className={styles.tagline}>{site.tagline}</p>
+
+        <nav className={styles.nav} aria-label="روابط الصفحة">
+          <ul>
+            {NAV.map((item) => (
+              <li key={item.href}>
+                <a href={item.href}>{item.label}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
         <Button href="#start" size="sm">
           سجّل لمحاضرة مجانية
         </Button>

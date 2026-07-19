@@ -34,9 +34,15 @@
 }
 
 .icon {
-  font-size: var(--step-2);
-  margin-block-end: var(--space-3);
-  display: block;
+  font-size: var(--step-1);
+  margin-block-end: var(--space-4);
+  display: grid;
+  place-items: center;
+  inline-size: 3rem;
+  block-size: 3rem;
+  border-radius: 0.875rem;
+  background: linear-gradient(150deg, var(--tint-purple), var(--tint-blue));
+  border: 1px solid #e0dbf5;
 }
 
 .card h3 {
@@ -50,13 +56,28 @@
 }
 
 .gold {
-  background: linear-gradient(160deg, #1f2a55, #3a2f6b);
+  position: relative;
+  background:
+    radial-gradient(90% 160% at 100% 0%, rgba(216, 165, 68, 0.22), transparent 55%),
+    linear-gradient(160deg, #1f2a55, #3a2f6b);
   color: #fff;
   border-radius: var(--radius);
   padding: var(--space-7);
   margin-block-start: var(--space-5);
   display: grid;
   gap: var(--space-4);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Gold hairline framing the guarantee — earns the "الذهبي" name. */
+.gold::before {
+  content: '';
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 
 @media (min-width: 56.25rem) {
@@ -70,6 +91,7 @@
 
 .gold h3 {
   font-size: var(--step-2);
+  color: #f2d79a;
 }
 
 .gold p {

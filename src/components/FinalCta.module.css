@@ -1,8 +1,29 @@
 .band {
-  background: var(--header-gradient);
+  position: relative;
+  background:
+    radial-gradient(70% 120% at 80% 0%, rgba(74, 159, 232, 0.55), transparent 55%),
+    radial-gradient(60% 120% at 10% 100%, rgba(107, 79, 187, 0.5), transparent 55%),
+    var(--brand-glow);
   color: #fff;
   text-align: center;
-  padding-block: var(--space-9);
+  padding-block: 5.5rem;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* Ruler baseline — closes the "measurement" motif at the page's final call. */
+.band::before {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  inset-block-start: 0;
+  height: 0.75rem;
+  background-image: repeating-linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.28) 0 2px,
+    transparent 2px 1.25rem
+  );
+  opacity: 0.7;
 }
 
 .title {

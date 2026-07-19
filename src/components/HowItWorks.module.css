@@ -6,6 +6,7 @@
   overflow: hidden;
   border: 1px solid var(--line);
   padding: 0;
+  list-style: none;
 }
 
 @media (min-width: 47.5rem) {
@@ -15,33 +16,36 @@
 }
 
 .step {
+  position: relative;
   background: var(--surface);
   padding: var(--space-6) var(--space-5) var(--space-6);
 }
 
 .n {
   font-family: var(--font-mono);
-  font-size: var(--step--1);
+  font-size: var(--step-0);
+  font-weight: 600;
   color: #fff;
-  width: 1.625rem;
-  height: 1.625rem;
-  border-radius: var(--radius-sm);
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
   display: grid;
   place-items: center;
   margin-block-end: var(--space-4);
+  box-shadow: 0 6px 16px -8px rgba(31, 42, 85, 0.6);
 }
 
 .step:nth-child(1) .n {
-  background: var(--btn-purple);
+  background: linear-gradient(145deg, var(--btn-purple-2), var(--btn-purple));
 }
 .step:nth-child(2) .n {
-  background: var(--listening-bg);
+  background: linear-gradient(145deg, #5f80e2, var(--listening-bg));
 }
 .step:nth-child(3) .n {
-  background: var(--writing-bg);
+  background: linear-gradient(145deg, #5cc4e6, var(--writing-bg));
 }
 .step:nth-child(4) .n {
-  background: var(--reading-bg);
+  background: linear-gradient(145deg, #5fd39a, var(--reading-bg));
 }
 
 .step h3 {

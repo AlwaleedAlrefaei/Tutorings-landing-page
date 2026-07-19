@@ -21,8 +21,13 @@ export function Testimonials() {
                 {t.quote}
               </blockquote>
               <figcaption className={styles.who}>
-                {t.name}
-                <span className={styles.meta}>{t.meta}</span>
+                <span className={styles.avatar} aria-hidden="true">
+                  {t.name.trim().charAt(0)}
+                </span>
+                <span className={styles.whoText}>
+                  {t.name}
+                  <span className={styles.meta}>{t.meta}</span>
+                </span>
               </figcaption>
             </figure>
           </li>

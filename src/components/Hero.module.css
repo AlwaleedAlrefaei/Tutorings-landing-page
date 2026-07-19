@@ -1,15 +1,19 @@
 .hero {
   padding-block: var(--space-8) var(--space-9);
   position: relative;
+  isolation: isolate;
 }
 
+/* Layered atmosphere: two soft brand blooms fading into the page. */
 .hero::before {
   content: '';
   position: absolute;
   inset: 0 0 auto 0;
-  height: 27.5rem;
-  background: var(--header-gradient);
-  opacity: 0.07;
+  height: 34rem;
+  z-index: -1;
+  background:
+    radial-gradient(60% 80% at 88% 8%, rgba(74, 159, 232, 0.18), transparent 60%),
+    radial-gradient(70% 90% at 12% 0%, rgba(107, 79, 187, 0.16), transparent 62%);
   mask-image: linear-gradient(#000, transparent);
   -webkit-mask-image: linear-gradient(#000, transparent);
   pointer-events: none;
@@ -78,20 +82,52 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-5);
+  gap: var(--space-3);
   margin-block-start: var(--space-6);
 }
 
-.proof {
+/* Compact "measured" trust strip — mono values, ruler dividers. */
+.trust {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--space-5);
+  margin-block-start: var(--space-6);
+  padding-block-start: var(--space-5);
+  border-block-start: 1px solid var(--line);
+}
+
+.trust li {
+  display: grid;
+  gap: 0.125rem;
+}
+
+.trust b {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: var(--step-2);
+  line-height: 1;
+  color: var(--btn-purple);
+}
+
+.trust span {
   font-size: var(--step--1);
   color: var(--ink-soft);
-  line-height: 1.6;
-  max-width: 30ch;
 }
 
 .visual {
   position: relative;
   padding-block-end: 3.25rem;
+}
+
+.visual::before {
+  content: '';
+  position: absolute;
+  inset: -8% -6% 10% -6%;
+  z-index: -1;
+  background: radial-gradient(60% 60% at 65% 40%, rgba(107, 79, 187, 0.22), transparent 70%);
+  filter: blur(8px);
+  pointer-events: none;
 }
 
 .photo {

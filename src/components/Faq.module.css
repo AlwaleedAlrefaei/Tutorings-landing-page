@@ -5,16 +5,36 @@
 }
 
 .item {
+  position: relative;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: var(--radius-sm);
-  margin-block-end: var(--space-2);
+  margin-block-end: var(--space-3);
   overflow: hidden;
-  transition: border-color var(--dur) var(--ease);
+  transition:
+    border-color var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease);
+}
+
+.item::before {
+  content: '';
+  position: absolute;
+  inset-block: 0;
+  inset-inline-start: 0;
+  width: 3px;
+  background: linear-gradient(var(--btn-purple-2), var(--btn-purple));
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform var(--dur) var(--ease);
 }
 
 .open {
   border-color: #c9c0ec;
+  box-shadow: var(--shadow-md);
+}
+
+.open::before {
+  transform: scaleY(1);
 }
 
 .trigger {
